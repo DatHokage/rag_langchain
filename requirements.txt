@@ -1,0 +1,31 @@
+# ===== Framework RAG =====
+langchain>=0.3,<0.4
+langchain-community>=0.3,<0.4
+langchain-core>=0.3,<0.4
+
+# ===== LLM providers (API online, free tier) =====
+langchain-google-genai>=2.0    # Gemini - lua chon du phong
+langchain-openai>=0.3,<1.0     # OpenRouter (API tuong thich OpenAI) - lua chon chinh
+
+# ===== Embedding (chay local, mien phi 100%) =====
+sentence-transformers>=3.0     # bkai-foundation-models/vietnamese-bi-encoder
+
+# ===== Vector store (chay local) =====
+chromadb>=0.5
+
+# ===== Document loaders =====
+pypdf>=4.0                     # Parse PDF
+python-docx>=1.1               # Parse DOCX
+
+# ===== Backend API =====
+fastapi>=0.115
+uvicorn[standard]>=0.30
+
+# ===== Tien ich =====
+python-dotenv>=1.0             # Doc bien moi truong tu .env
+
+# ===== Danh gia (tuy chon - cai khi can chay eval) =====
+# ragas>=0.2
+
+# ===== Frontend (buoc 6 roadmap) =====
+streamlit>=1.38

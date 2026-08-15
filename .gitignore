@@ -1,0 +1,60 @@
+# ==================================================
+# .gitignore — Chatbot Quy che (RAG LangChain)
+# Che do: repo chi push len HF Space RIENG TU (private).
+# => vectorstore + du lieu quy che DUOC commit de Space
+#    chay duoc ma khong can build lai index.
+# CAM: khong push repo nay len GitHub/cong khai —
+# se lo du lieu quy che. Neu can repo code cong khai,
+# tao repo rieng voi ban .gitignore chat hon.
+# ==================================================
+
+# ===== Bao mat: KHONG commit secrets =====
+.env
+*.key
+*.pem
+
+# ===== Vector store + du lieu quy che =====
+# COMMIT (Space can vectorstore de chay; data/raw lam bang chung).
+# Chi chan file tam/xu ly phu:
+data/processed/chunks.json
+# File Word tam khoa mo cua Office
+~$*
+
+# ===== Logs (cau hoi/tra loi + log chay) =====
+logs/
+*.log
+
+# ===== Python =====
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+*.egg
+.venv/
+venv/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# ===== Jupyter / IPython =====
+.ipynb_checkpoints/
+
+# ===== Cache model (tai lai duoc; thuong o ~/.cache) =====
+.cache/
+
+# ===== Streamlit =====
+.streamlit/secrets.toml
+
+# ===== He thong / IDE =====
+.DS_Store
+Thumbs.db
+Desktop.ini
+.vscode/
+.idea/
+*.swp
+*.swo
+
+# ===== Claude Code (giu settings.json neu muon share) =====
+.claude/settings.local.json
