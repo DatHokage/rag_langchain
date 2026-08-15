@@ -40,8 +40,9 @@ Mở `.env` và điền:
 
 | Biến | Lấy key ở đâu | Ghi chú |
 |---|---|---|
-| `GOOGLE_API_KEY` | https://aistudio.google.com/apikey | Miễn phí, **bắt buộc** |
-| `GROQ_API_KEY` | https://console.groq.com/keys | Miễn phí, khuyến nghị (fallback) |
+| `GROQ_API_KEY` | https://openrouter.ai/ | Miễn phí, **bắt buộc** |
+| `GOOGLE_API_KEY` | https://aistudio.google.com/apikey | Miễn phí, khuyến nghị (fallback) |
+
 
 > 🔑 **Không commit `.env` vào Git** — đã có trong `.gitignore`.
 
