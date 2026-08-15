@@ -1,0 +1,42 @@
+# ==================================================
+# .gitattributes — Chatbot Quy che (RAG LangChain)
+# Khai bao file nao la text / binary de Git diff, merge
+# va xuong dong dung cach — nhat la khi lam viec tren
+# Windows ma HF Space chay tren Linux.
+# ==================================================
+
+# ===== Mac dinh: tu dong nhan dien text/binary =====
+* text=auto
+
+# ===== Code & config: text, chuan hoa ve LF khi commit =====
+# Space chay Linux; chuan hoa LF tranh nhieu diff CRLF/LF
+# khi sua file tren Windows
+*.py    text eol=lf
+*.md    text eol=lf
+*.json  text eol=lf
+*.txt   text eol=lf
+*.toml  text eol=lf
+*.yml   text eol=lf
+*.yaml  text eol=lf
+*.sh    text eol=lf
+
+# ===== Tai lieu quy che: BINARY — Git khong diff noi dung =====
+# (file .docx goc ~30MB; diff text vua vo nghia vua cham.
+#  Neu sau nay file lon hon nhieu, can nhac dung Git LFS —
+#  HF Spaces ho tro LFS mien phi)
+*.docx  binary
+*.doc   binary
+*.pdf   binary
+
+# ===== Vector store (ChromaDB): BINARY =====
+# Gom sqlite + index HNSW (*.bin) — duoc thay TOAN BO moi
+# lan re-index, khong bao gio merge tung phan
+vectorstore/** binary
+*.sqlite3      binary
+*.bin          binary
+
+# ===== Weights / cache model (phong khi vo tinh xuat hien): BINARY =====
+*.onnx          binary
+*.pkl           binary
+*.pt            binary
+*.safetensors   binary
